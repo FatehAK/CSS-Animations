@@ -1,0 +1,632 @@
+:root {
+    font-size: 100%;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 20px;
+}
+
+/* btn hover effect */
+.mybtn {
+    cursor: pointer;
+    border: 0;
+    padding: 10px;
+    background: paleturquoise;
+    transition: background 0.5s, border-radius 1s;
+}
+
+.mybtn:hover {
+    background: #ee5170;
+    border-radius: 10px;
+}
+
+.mybtn:active {
+    background: crimson;
+}
+
+/* ctn hover effect */
+.mydiv1 {
+    background: #fff04f;
+    width: 150px;
+    height: 100px;
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+
+.mydiv1__child {
+    width: 150px;
+    height: 100px;
+    opacity: 0;
+    border-radius: 0;
+    transition: opacity 0.5s;
+    background: #61616144;
+}
+
+.mydiv1__child:hover {
+    opacity: 1;
+}
+
+.mydiv1__child > button {
+    background: #ff2a71;
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 8px 5px 8px;
+    opacity: 0;
+    transition: opacity 0.5s 1s;
+}
+
+.mydiv1__child:hover > button {
+    opacity: 1;
+}
+
+/* transition on css props */
+.mydiv2 {
+    background: lightgray;
+    padding: 20px;
+    margin: 10px 0 0 0;
+    display: inline-block;
+}
+
+.mydiv2__child {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: crimson;
+    transition: padding 1s 0.2s ease-out;
+}
+
+.mydiv2:hover .mydiv2__child {
+    padding: 100px;
+}
+
+/* rotate() */
+.mydiv3 {
+    background: paleturquoise;
+    border: 1px dashed grey;
+    margin: 10px 20px 0 0;
+    display: inline-block;
+}
+
+.mydiv3__child {
+    width: 100px;
+    height: 150px;
+    background: palegoldenrod;
+    border: 1px solid black;
+    overflow: hidden;
+    text-align: center;
+    line-height: 140px;
+    transition: transform 1s ease-in;
+}
+
+.mydiv3__child:hover {
+    transform: rotate(1.05turn);
+}
+
+/* skewX() */
+.mydiv4 {
+    background: paleturquoise;
+    border: 1px dashed grey;
+    margin: 10px 0 0 0;
+    display: inline-block;
+}
+
+.mydiv4__child {
+    width: 100px;
+    height: 150px;
+    background: palegoldenrod;
+    border: 1px solid black;
+    overflow: hidden;
+    text-align: center;
+    line-height: 140px;
+    transition: transform 0.5s ease-in;
+}
+
+.mydiv4__child:hover {
+    transform: skewX(-15deg);
+}
+
+/* scale() */
+.mydiv5 {
+    background: paleturquoise;
+    border: 1px dashed grey;
+    margin: 10px 0 0 20px;
+    display: inline-block;
+}
+
+.mydiv5__child {
+    width: 100px;
+    height: 150px;
+    background: palegoldenrod;
+    border: 1px solid black;
+    overflow: hidden;
+    text-align: center;
+    line-height: 140px;
+    transition: transform 0.5s ease-in;
+}
+
+.mydiv5__child:hover {
+    transform: scale(1.3);
+}
+
+/* transform-origin */
+.mydiv6 {
+    background: paleturquoise;
+    border: 1px dashed grey;
+    margin: 10px 0 0 20px;
+    display: inline-block;
+}
+
+.mydiv6__child {
+    width: 100px;
+    height: 150px;
+    background: palegoldenrod;
+    border: 1px solid black;
+    overflow: hidden;
+    text-align: center;
+    line-height: 140px;
+    transform-origin: 0 0;
+    transition: transform 0.5s ease-in;
+}
+
+.mydiv6__child:hover {
+    transform: rotate(30deg);
+}
+
+/* translate() */
+.mydiv7 {
+    background: paleturquoise;
+    border: 1px dashed grey;
+    margin: 10px 0 0 20px;
+    display: inline-block;
+}
+
+.mydiv7__child {
+    width: 100px;
+    height: 150px;
+    background: palegoldenrod;
+    border: 1px solid black;
+    overflow: hidden;
+    text-align: center;
+    line-height: 140px;
+    transform-origin: 0 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.mydiv7__child:hover {
+    transform: translate(100px);
+}
+
+/* sliding effect */
+.mydiv8 {
+    display: inline-block;
+    margin: 10px 0 0 20px;
+    background: paleturquoise;
+    border: 1px dashed grey;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+.mydiv8__child {
+    width: 100px;
+    height: 150px;
+    background: palegoldenrod;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 140px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 150px;
+    line-height: 140px;
+    text-align: center;
+    color: #fff;
+    background: #e4294e;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.mydiv8:hover .overlay {
+    transform: translateX(0);
+}
+
+/* 3d rotateX() */
+.mydiv9 {
+    background: paleturquoise;
+    border: 1px dashed grey;
+    margin: 10px 0 0 0;
+    display: inline-block;
+    perspective: 700px;
+}
+
+.mydiv9__child {
+    width: 100px;
+    height: 150px;
+    background: palegoldenrod;
+    border: 1px solid black;
+    overflow: hidden;
+    text-align: center;
+    line-height: 140px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.mydiv9__child:hover {
+    transform: rotateX(180deg);
+}
+
+/* 3d rotateY() */
+.mydiv10 {
+    background: paleturquoise;
+    border: 1px dashed grey;
+    margin: 10px 0 0 20px;
+    display: inline-block;
+    perspective: 700px;
+}
+
+.mydiv10__child {
+    width: 100px;
+    height: 150px;
+    background: palegoldenrod;
+    border: 1px solid black;
+    overflow: hidden;
+    text-align: center;
+    line-height: 140px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.mydiv10__child:hover {
+    transform: rotateY(180deg);
+}
+
+/* 3d card flip */
+.mydiv11 {
+    display: inline-block;
+    width: 100px;
+    height: 150px;
+    perspective: 1000px;
+    border: 1px dashed grey;
+    background: paleturquoise;
+    margin: 0 0 0 20px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.side-a {
+    background: palegoldenrod;
+    text-align: center;
+    line-height: 140px;
+    border: 1px solid black;
+}
+
+.side-b {
+    background: #e4294e;
+    color: #fff;
+    text-align: center;
+    line-height: 140px;
+    border: 1px solid black;
+    transform: rotateY(180deg);
+}
+
+.side-a,
+.side-b {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.mydiv11:hover .card {
+    transform: rotateY(180deg);
+}
+
+/* rotate3d(x,y,z,angle) */
+.mydiv12 {
+    background: paleturquoise;
+    border: 1px dashed grey;
+    margin: 10px 0 0 20px;
+    display: inline-block;
+    perspective: 700px;
+}
+
+.mydiv12__child {
+    width: 100px;
+    height: 150px;
+    background: palegoldenrod;
+    border: 1px solid black;
+    overflow: hidden;
+    text-align: center;
+    line-height: 140px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.mydiv12__child:hover {
+    transform: rotate3d(1, 1, 1, 65deg);
+}
+
+/* perspective-origin */
+.mydiv13 {
+    background: paleturquoise;
+    border: 1px dashed grey;
+    margin: 10px 0 0 20px;
+    display: inline-block;
+    perspective: 700px;
+    perspective-origin: bottom right;
+}
+
+.mydiv13__child {
+    width: 100px;
+    height: 150px;
+    background: palegoldenrod;
+    border: 1px solid black;
+    overflow: hidden;
+    text-align: center;
+    line-height: 140px;
+    transition: transform 0.5s cubic-bezier(0.5, -2.5, 0.2, 4);
+}
+
+.mydiv13__child:hover {
+    transform: rotate3d(1, 1, 1, 65deg);
+}
+
+/* 3d cube */
+.mydiv14 {
+    display: inline-block;
+    width: 100px;
+    height: 150px;
+    perspective: 1000px;
+    border: 1px dashed #000;
+    background: paleturquoise;
+    margin: 0 0 0 25px;
+}
+
+.cube {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 2s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.cube:hover {
+    transform: rotateY(-270deg);
+}
+
+.front {
+    background: palegoldenrod;
+    border: 1px dashed #000;
+    text-align: center;
+    line-height: 140px;
+    /* using half width to move front side towards us rather than default center position */
+    transform: translateZ(50px);
+}
+
+.back {
+    /* move back side away from us */
+    transform: translateZ(-50px) rotateY(270deg);
+    transform-origin: center left;
+    background: #e4294e;
+    color: #fff;
+    border: 1px dashed #000;
+    text-align: center;
+    line-height: 140px;
+}
+
+.left {
+    transform: rotateY(-270deg) translateX(50px);
+    /* shift it into place */
+    transform-origin: top right;
+    background: skyblue;
+}
+
+.right {
+    transform: translateZ(-50px) rotateX(180deg);
+    background: violet;
+}
+
+.front,
+.back,
+.left,
+.right {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* Responsive SVG */
+@media (max-width: 580px) {
+    .star-point,
+    .outer-circle {
+        opacity: 0;
+    }
+
+    .inner-circle {
+        stroke-opacity: 0;
+    }
+
+    .star-elt {
+        stroke-width: 8;
+    }
+}
+
+/* SVG icon styles */
+.icon {
+    width: 150px;
+    display: inline-block;
+}
+
+.hammer-bg {
+    transition: 0.3s ease-in;
+    stroke: #fee16e;
+}
+
+.hammer-bg:hover {
+    fill: #3881cc;
+    stroke-width: 8;
+}
+
+.gear-icon {
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    transition: transform 0.6s ease-out;
+}
+
+.gear:hover .gear-icon {
+    transform: rotate(180deg) scale(1.2);
+}
+
+.heart-icon {
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    transition: transform 0.4s ease-out;
+}
+
+.heart:hover .heart-icon {
+    transform: scale(1.1);
+}
+
+/* text animation */
+.text-elt {
+    text-align: center;
+    animation: slide 1.3s both alternate infinite;
+}
+
+@keyframes slide {
+    0% {
+        color: #4545f5;
+        transform: translate3d(-40%, 0, 0);
+    }
+
+    100% {
+        color: #ee6b4b;
+        transform: translate3d(40%, 0, 0);
+    }
+}
+
+/* badge animation */
+.badge {
+    width: 200px;
+}
+
+.badge * {
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+    }
+
+    30% {
+        transform: scale(1.1);
+    }
+
+    60% {
+        transform: scale(0.9);
+    }
+}
+
+.outer,
+.inner,
+.inline {
+    animation: grow 1s ease-out backwards;
+}
+
+.inner {
+    animation-delay: 0.1s;
+}
+
+.inline {
+    animation-delay: 0.15s;
+}
+
+@keyframes turn {
+    0% {
+        transform: rotate(0) scale(0);
+        opacity: 0;
+    }
+
+    60% {
+        transform: rotate(375deg) scale(1.1);
+    }
+
+    80% {
+        transform: rotate(355deg) scale(0.9);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.star {
+    animation: turn 1.1s 0.2s ease-out backwards;
+}
+
+@keyframes pulse {
+    50% {
+        transform: scale(1.4);
+    }
+}
+
+.star circle {
+    animation: pulse 0.7s 1.5s;
+}
+
+.star circle:nth-of-type(2) {
+    animation-delay: 1.6s;
+}
+
+.star circle:nth-of-type(3) {
+    animation-delay: 1.7s;
+}
+
+.star circle:nth-of-type(4) {
+    animation-delay: 1.8s;
+}
+
+.star circle:nth-of-type(5) {
+    animation-delay: 1.9s;
+}
+
+/* line animation */
+@keyframes offset {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill-color {
+    100% {
+        fill: #6fbc6d;
+    }
+}
+
+.logo {
+    stroke: #6fbc6d;
+    stroke-width: 2;
+    stroke-dasharray: 810;
+    stroke-dashoffset: 810;
+    animation: offset 5s linear forwards, fill-color 0.8s 5s forwards;
+}
