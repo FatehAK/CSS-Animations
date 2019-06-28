@@ -1,2 +1,2 @@
-# CSS Transitions Animations
+# CSS Animations
 A simple demo on CSS transitions and animation of SVG graphics.
